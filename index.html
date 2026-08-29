@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skillora Academy — Learn Skills. Build Projects. Get Job Ready. Professional courses and bootcamps in Development, Design, Business, Marketing, and Sales.">
+  <title>Skillora Academy — Learn Skills. Build Projects. Get Job Ready.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement">
+    <strong>Registration Open</strong> — Fall 2026 Cohorts. Limited seats available.
+    <button class="announcement__close" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Skillora Academy Home">
+        <span class="logo__mark">S</span>
+        <span class="logo__text">Skillora<span>.</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="pages/courses.html" class="nav__link">Courses</a></li>
+          <li><a href="pages/instructors.html" class="nav__link">Instructors</a></li>
+          <li><a href="pages/pricing.html" class="nav__link">Pricing</a></li>
+          <li><a href="pages/about.html" class="nav__link">About</a></li>
+          <li><a href="pages/contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="header__actions">
+          <a href="pages/courses.html" class="btn btn--primary btn--sm">Explore Courses</a>
+        </div>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Fall 2026 Enrollment Now Live</span>
+        <h1 class="hero__title">Learn Skills. Build Projects. <span>Get Job Ready.</span></h1>
+        <p class="hero__text">Master in-demand skills with project-based bootcamps taught by industry experts. Join 500+ students who launched their careers with Skillora.</p>
+        <div class="hero__actions">
+          <a href="pages/courses.html" class="btn btn--primary btn--lg">Explore Courses</a>
+          <a href="pages/pricing.html" class="btn btn--outline btn--lg">View Pricing</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat-card">
+            <div class="stat-card__value" data-count="15" data-suffix="+">15+</div>
+            <div class="stat-card__label">Courses</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value" data-count="500" data-suffix="+">500+</div>
+            <div class="stat-card__label">Students</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value" data-count="50" data-suffix="+">50+</div>
+            <div class="stat-card__label">Real Projects</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__badge-float hero__badge-float--1">
+          <span class="dot"></span> Live Session
+        </div>
+        <div class="hero__badge-float hero__badge-float--2">
+          Certified Course
+        </div>
+        <div class="hero__card">
+          <div class="hero__card-image">&#128187;</div>
+          <h3 class="hero__card-title">Full-Stack Web Development</h3>
+          <p class="hero__card-meta">Module 4 of 12 — React &amp; APIs</p>
+          <div class="hero__card-progress">
+            <div class="hero__card-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Courses -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Popular Courses</span>
+        <h2 class="section-title">Most Enrolled Bootcamps</h2>
+        <p class="section-subtitle">Hands-on, project-based courses designed to make you job-ready in weeks.</p>
+      </div>
+      <div class="grid-auto" id="popularCourses">
+        <!-- Course Card 1 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #6c63ff, #2f80ed);">
+            <span class="course-card__badge badge badge--dev">Development</span>
+            <span class="course-card__level">Intermediate</span>
+            <span class="course-card__image-text">&#128187;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">Full-Stack Web Development</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 12 weeks</span>
+              <span>&#128218; 48 lessons</span>
+            </div>
+            <p class="course-card__instructor">By Sarah Mitchell</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$899</span>
+                <span class="course-card__price-old">$1,200</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 2 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #e84393, #6c63ff);">
+            <span class="course-card__badge badge badge--design">Design</span>
+            <span class="course-card__level">Beginner</span>
+            <span class="course-card__image-text">&#127912;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">UI/UX Design Fundamentals</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 8 weeks</span>
+              <span>&#128218; 32 lessons</span>
+            </div>
+            <p class="course-card__instructor">By James Chen</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$599</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 3 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #f2994a, #e84393);">
+            <span class="course-card__badge badge badge--business">Business</span>
+            <span class="course-card__level">Advanced</span>
+            <span class="course-card__image-text">&#128188;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">Product Management Bootcamp</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 10 weeks</span>
+              <span>&#128218; 40 lessons</span>
+            </div>
+            <p class="course-card__instructor">By Emily Rodriguez</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$749</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 4 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #2f80ed, #27ae60);">
+            <span class="course-card__badge badge badge--marketing">Marketing</span>
+            <span class="course-card__level">Intermediate</span>
+            <span class="course-card__image-text">&#128202;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">Digital Marketing Mastery</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 6 weeks</span>
+              <span>&#128218; 28 lessons</span>
+            </div>
+            <p class="course-card__instructor">By Marcus Johnson</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$499</span>
+                <span class="course-card__price-old">$650</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 5 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #27ae60, #2f80ed);">
+            <span class="course-card__badge badge badge--sales">Sales</span>
+            <span class="course-card__level">Beginner</span>
+            <span class="course-card__image-text">&#129309;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">Sales &amp; Negotiation Skills</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 4 weeks</span>
+              <span>&#128218; 20 lessons</span>
+            </div>
+            <p class="course-card__instructor">By David Park</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$349</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Course Card 6 -->
+        <article class="course-card reveal">
+          <div class="course-card__image" style="background: linear-gradient(135deg, #6c63ff, #e84393);">
+            <span class="course-card__badge badge badge--dev">Development</span>
+            <span class="course-card__level">Advanced</span>
+            <span class="course-card__image-text">&#129302;</span>
+          </div>
+          <div class="course-card__body">
+            <h3 class="course-card__title">Data Science with Python</h3>
+            <div class="course-card__meta">
+              <span>&#128197; 14 weeks</span>
+              <span>&#128218; 56 lessons</span>
+            </div>
+            <p class="course-card__instructor">By Anita Patel</p>
+            <div class="course-card__footer">
+              <div>
+                <span class="course-card__price">$999</span>
+              </div>
+              <a href="pages/course-details.html" class="btn btn--primary btn--sm">Preview</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Browse by Category</span>
+        <h2 class="section-title">Find Your Path</h2>
+        <p class="section-subtitle">Explore courses across five in-demand career tracks.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card reveal" data-filter="development" role="link" tabindex="0">
+          <div class="category-card__icon" style="background: linear-gradient(135deg, #6c63ff, #2f80ed);">&#128187;</div>
+          <h3 class="category-card__title">Development</h3>
+          <p class="category-card__count">6 courses</p>
+        </div>
+        <div class="category-card reveal" data-filter="design" role="link" tabindex="0">
+          <div class="category-card__icon" style="background: linear-gradient(135deg, #e84393, #6c63ff);">&#127912;</div>
+          <h3 class="category-card__title">Design</h3>
+          <p class="category-card__count">4 courses</p>
+        </div>
+        <div class="category-card reveal" data-filter="business" role="link" tabindex="0">
+          <div class="category-card__icon" style="background: linear-gradient(135deg, #f2994a, #e84393);">&#128188;</div>
+          <h3 class="category-card__title">Business</h3>
+          <p class="category-card__count">3 courses</p>
+        </div>
+        <div class="category-card reveal" data-filter="marketing" role="link" tabindex="0">
+          <div class="category-card__icon" style="background: linear-gradient(135deg, #2f80ed, #27ae60);">&#128202;</div>
+          <h3 class="category-card__title">Marketing</h3>
+          <p class="category-card__count">3 courses</p>
+        </div>
+        <div class="category-card reveal" data-filter="sales" role="link" tabindex="0">
+          <div class="category-card__icon" style="background: linear-gradient(135deg, #27ae60, #2f80ed);">&#129309;</div>
+          <h3 class="category-card__title">Sales</h3>
+          <p class="category-card__count">2 courses</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Learn With Us -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Why Skillora</span>
+        <h2 class="section-title">Why Learn With Us</h2>
+        <p class="section-subtitle">Everything you need to go from beginner to professional.</p>
+      </div>
+      <div class="grid-auto">
+        <div class="card feature-card reveal">
+          <div class="feature-card__icon" style="background: linear-gradient(135deg, #6c63ff, #2f80ed);">&#128736;</div>
+          <h3 class="feature-card__title">Hands-On Projects</h3>
+          <p class="feature-card__text">Build real-world projects that you can showcase in your portfolio and job interviews.</p>
+        </div>
+        <div class="card feature-card reveal">
+          <div class="feature-card__icon" style="background: linear-gradient(135deg, #e84393, #6c63ff);">&#129318;</div>
+          <h3 class="feature-card__title">Expert Mentors</h3>
+          <p class="feature-card__text">Learn from industry professionals with 10+ years of experience at top companies.</p>
+        </div>
+        <div class="card feature-card reveal">
+          <div class="feature-card__icon" style="background: linear-gradient(135deg, #f2994a, #e84393);">&#127891;</div>
+          <h3 class="feature-card__title">Verified Certificates</h3>
+          <p class="feature-card__text">Earn industry-recognized certificates that employers trust and value.</p>
+        </div>
+        <div class="card feature-card reveal">
+          <div class="feature-card__icon" style="background: linear-gradient(135deg, #27ae60, #2f80ed);">&#128107;</div>
+          <h3 class="feature-card__title">Career Support</h3>
+          <p class="feature-card__text">Get resume reviews, interview prep, and job placement assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Testimonials</span>
+        <h2 class="section-title">Student Success Stories</h2>
+        <p class="section-subtitle">See how Skillora graduates transformed their careers.</p>
+      </div>
+      <div class="grid-auto">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-card__text">The Full-Stack bootcamp was a game-changer. I went from zero coding experience to landing a developer role in 3 months after graduation.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MK</div>
+            <div>
+              <div class="testimonial-card__name">Michael Kim</div>
+              <div class="testimonial-card__role">Junior Developer at TechCorp</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-card__text">The UI/UX course gave me the portfolio and confidence I needed. I now work as a product designer at a startup. The mentorship was invaluable.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">JL</div>
+            <div>
+              <div class="testimonial-card__name">Jessica Lopez</div>
+              <div class="testimonial-card__role">Product Designer at DesignHub</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-card__text">The digital marketing bootcamp was practical and up-to-date. I applied the strategies to my own business and saw a 40% increase in leads.</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">RT</div>
+            <div>
+              <div class="testimonial-card__name">Robert Taylor</div>
+              <div class="testimonial-card__role">Marketing Manager at GrowthLab</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Pricing</span>
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">Choose the plan that fits your career goals. Cancel anytime.</p>
+      </div>
+      <div class="grid-auto">
+        <!-- Starter -->
+        <div class="pricing-card reveal">
+          <h3 class="pricing-card__name">Starter</h3>
+          <p class="pricing-card__desc">Perfect for trying out a single course.</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$29</span>
+            <span class="pricing-card__price-period">/month</span>
+          </div>
+          <p class="pricing-card__price-note">Billed monthly</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> 1 course at a time</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Community access</div>
+            <div class="pricing-card__feature pricing-card__feature--disabled"><span class="pricing-card__feature-icon">&#10005;</span> Mentorship sessions</div>
+            <div class="pricing-card__feature pricing-card__feature--disabled"><span class="pricing-card__feature-icon">&#10005;</span> Certificate of completion</div>
+          </div>
+          <a href="pages/pricing.html" class="btn btn--outline btn--block">Get Started</a>
+        </div>
+
+        <!-- Professional (Recommended) -->
+        <div class="pricing-card pricing-card--featured reveal">
+          <span class="pricing-card__ribbon">Recommended</span>
+          <h3 class="pricing-card__name">Professional</h3>
+          <p class="pricing-card__desc">Best value for serious learners.</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$79</span>
+            <span class="pricing-card__price-period">/month</span>
+          </div>
+          <p class="pricing-card__price-note">Billed monthly</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Unlimited courses</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Community access</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> 2 mentorship sessions/month</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Verified certificates</div>
+          </div>
+          <a href="pages/pricing.html" class="btn btn--primary btn--block">Choose Professional</a>
+        </div>
+
+        <!-- Career -->
+        <div class="pricing-card reveal">
+          <h3 class="pricing-card__name">Career</h3>
+          <p class="pricing-card__desc">Full career transformation support.</p>
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">$149</span>
+            <span class="pricing-card__price-period">/month</span>
+          </div>
+          <p class="pricing-card__price-note">Billed monthly</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Everything in Professional</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Weekly 1-on-1 mentorship</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Career coaching &amp; job placement</div>
+            <div class="pricing-card__feature"><span class="pricing-card__feature-icon">&#10003;</span> Priority support</div>
+          </div>
+          <a href="pages/pricing.html" class="btn btn--outline btn--block">Go Career</a>
+        </div>
+      </div>
+      <p class="text-center mt-4 text-muted">Want to see yearly pricing? <a href="pages/pricing.html" class="text-accent">View full pricing page &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions? We've got answers.</p>
+      </div>
+      <div class="faq-list" data-faq>
+        <div class="accordion reveal">
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Do I need prior experience to enroll?</span>
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                No prior experience is required for beginner-level courses. Each course clearly lists its prerequisites, and many start from absolute basics. Our mentors will guide you every step of the way.
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>How long do I have access to course materials?</span>
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                You get lifetime access to all course materials, including future updates. Even after completing the course, you can revisit lessons and download resources anytime.
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Are the certificates recognized by employers?</span>
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                Yes. Skillora certificates are industry-recognized and valued by employers. Our career-tier students also get job placement assistance with our hiring partners.
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>Can I get a refund if I'm not satisfied?</span>
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                Absolutely. We offer a 14-day money-back guarantee on all courses and subscriptions. If you're not satisfied, contact our support team for a full refund — no questions asked.
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header" aria-expanded="false">
+              <span>What if I can't attend live sessions?</span>
+              <span class="accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                All live sessions are recorded and available within 24 hours. You can watch them at your own pace and still participate in discussions through our community platform.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="cta-banner__title">Ready to Start Your Journey?</h2>
+        <p class="cta-banner__text">Join 500+ students who transformed their careers with Skillora Academy.</p>
+        <div class="cta-banner__actions">
+          <a href="pages/courses.html" class="btn btn--white btn--lg">Browse Courses</a>
+          <a href="pages/contact.html" class="btn btn--outline btn--lg" style="border-color: rgba(255,255,255,0.4); color: white;">Talk to an Advisor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__mark">S</span>
+            <span class="logo__text" style="color:white;">Skillora<span>.</span></span>
+          </a>
+          <p class="footer__about">Skillora Academy is a professional training academy offering project-based courses and bootcamps. Learn skills, build real projects, and get job-ready with expert mentorship.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">&#120143;</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">&#128247;</a>
+            <a href="#" aria-label="YouTube">&#9654;</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Courses</h4>
+          <ul class="footer__list">
+            <li><a href="pages/courses.html">All Courses</a></li>
+            <li><a href="pages/courses.html?category=development">Development</a></li>
+            <li><a href="pages/courses.html?category=design">Design</a></li>
+            <li><a href="pages/courses.html?category=business">Business</a></li>
+            <li><a href="pages/courses.html?category=marketing">Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--links-second">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__list">
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/instructors.html">Instructors</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Support</h4>
+          <ul class="footer__list">
+            <li><a href="pages/contact.html">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Skillora Academy. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/accordion.js"></script>
+</body>
+</html>

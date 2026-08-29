@@ -1,0 +1,112 @@
+/* ============================================
+   Stayora — Design Tokens
+   Colors, typography, spacing, breakpoints
+   ============================================ */
+
+:root {
+  /* ---- Color Palette ---- */
+  --c-cream: #f5f0e7;
+  --c-cream-deep: #ebe3d3;
+  --c-forest: #22352c;
+  --c-forest-light: #2d4a3c;
+  --c-forest-dark: #18241d;
+  --c-sand: #c8ac87;
+  --c-sand-light: #d8c4a8;
+  --c-sand-dark: #b0956f;
+  --c-charcoal: #202421;
+  --c-charcoal-light: #3a403c;
+  --c-white: #ffffff;
+  --c-black: #000000;
+
+  /* ---- Semantic Aliases ---- */
+  --bg-primary: var(--c-cream);
+  --bg-secondary: var(--c-white);
+  --bg-dark: var(--c-forest);
+  --text-primary: var(--c-charcoal);
+  --text-secondary: var(--c-forest);
+  --text-light: var(--c-white);
+  --text-muted: var(--c-charcoal-light);
+  --accent: var(--c-sand);
+  --accent-hover: var(--c-sand-dark);
+  --border-color: rgba(34, 53, 44, 0.12);
+  --border-light: rgba(255, 255, 255, 0.18);
+  --shadow-color: rgba(32, 36, 33, 0.08);
+  --shadow-strong: rgba(32, 36, 33, 0.18);
+
+  /* ---- Typography ---- */
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia,
+    "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Fluid type scale using clamp() */
+  --fs-eyebrow: clamp(0.7rem, 0.68rem + 0.1vw, 0.8rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.125rem, 1.06rem + 0.32vw, 1.35rem);
+  --fs-h4: clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
+  --fs-h3: clamp(1.6rem, 1.42rem + 0.9vw, 2.25rem);
+  --fs-h2: clamp(2rem, 1.68rem + 1.6vw, 3.25rem);
+  --fs-h1: clamp(2.5rem, 1.9rem + 3vw, 5rem);
+
+  /* Line heights */
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+  --lh-lead: 1.5;
+
+  /* ---- Spacing — 8px base scale ---- */
+  --sp-1: 0.25rem; /* 4px */
+  --sp-2: 0.5rem; /* 8px */
+  --sp-3: 0.75rem; /* 12px */
+  --sp-4: 1rem; /* 16px */
+  --sp-5: 1.5rem; /* 24px */
+  --sp-6: 2rem; /* 32px */
+  --sp-7: 3rem; /* 48px */
+  --sp-8: 4rem; /* 64px */
+  --sp-9: 6rem; /* 96px */
+  --sp-10: 8rem; /* 128px */
+
+  /* Section padding — fluid */
+  --section-py: clamp(3.5rem, 2.5rem + 5vw, 7rem);
+  --section-px: clamp(1.5rem, 0.5rem + 4vw, 5rem);
+
+  /* ---- Layout ---- */
+  --container-max: 1320px;
+  --container-wide: 1600px;
+  --container-narrow: 760px;
+  --header-height: 88px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ---- Transitions ---- */
+  --t-fast: 0.2s ease;
+  --t-base: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --t-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 2px 8px var(--shadow-color);
+  --shadow-md: 0 8px 30px var(--shadow-color);
+  --shadow-lg: 0 20px 60px var(--shadow-strong);
+  --shadow-card: 0 4px 20px var(--shadow-color);
+
+  /* ---- Z-index scale ---- */
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-hero: 1;
+  --z-sticky: 50;
+
+  /* ---- Breakpoints (reference only; media queries in responsive.css) ---- */
+  --bp-mobile: 360px;
+  --bp-tablet-sm: 700px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1440px;
+}

@@ -1,0 +1,528 @@
+/* ============================================
+   Stayora — Responsive Stylesheet
+   Breakpoints: 360px, 700px, 768px, 1024px, 1440px
+   Mobile-first overrides applied from large to small
+   ============================================ */
+
+/* ---- Desktop (1440px+) ---- */
+@media (min-width: 1440px) {
+  :root {
+    --section-px: 6rem;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* ---- Laptop (1024px and below) ---- */
+@media (max-width: 1024px) {
+  .rooms-grid,
+  .rooms-listing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experiences-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+  }
+
+  .room-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-widget {
+    position: static;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-6);
+  }
+
+  .gallery-masonry {
+    column-count: 3;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-info__card {
+    flex: 1;
+    min-width: 280px;
+  }
+}
+
+/* ---- Tablet (768px and below) ---- */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+    --section-py: clamp(2.5rem, 2rem + 3vw, 4rem);
+  }
+
+  /* ---- Mobile Navigation (CSS-only with checkbox hack) ---- */
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--c-forest);
+    color: var(--c-white);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--sp-7);
+    transform: translateX(100%);
+    transition: transform var(--t-base);
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-overlay);
+  }
+
+  #nav-toggle:checked ~ .main-nav {
+    transform: translateX(0);
+  }
+
+  #nav-toggle:checked ~ .nav-toggle .nav-toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  #nav-toggle:checked ~ .nav-toggle .nav-toggle__line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #nav-toggle:checked ~ .nav-toggle .nav-toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-5);
+    width: 100%;
+  }
+
+  .main-nav__link {
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-family: var(--font-serif);
+  }
+
+  .main-nav .btn {
+    width: 100%;
+    margin-top: var(--sp-4);
+  }
+
+  /* Nav overlay background */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+  }
+
+  #nav-toggle:checked ~ .nav-overlay {
+    display: block;
+  }
+
+  /* ---- Header adjustments ---- */
+  .site-header--solid {
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* ---- Hero ---- */
+/* فرض المسافات ومنع تداخل قسم الهيرو */
+/* .hero {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh !important;
+  height: auto !important;
+  padding-top: 140px !important;
+  padding-bottom: 100px !important;
+  overflow: visible !important;
+}
+
+/* رفع شريط الحجز وإبرازه فوق باقي العناصر 
+.hero__booking {
+  position: relative !important;
+  bottom: auto !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  z-index: 99 !important;
+}*/
+
+.hero__booking .booking-bar {
+  margin-bottom: 0 !important;
+} 
+
+  /* ---- Booking bar stacks vertically ---- */
+  .booking-bar {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .booking-bar__field {
+    min-width: 100%;
+  }
+
+  .booking-bar__submit {
+    padding: var(--sp-4);
+  }
+
+  /* ---- Rooms grid — single column ---- */
+  .rooms-grid,
+  .rooms-listing {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  /* ---- Experiences preview — 2 columns ---- */
+  .experiences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---- Testimonials — single column ---- */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Stats — 2 columns ---- */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---- Gallery teaser simplifies ---- */
+  .gallery-teaser {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px 160px 160px;
+  }
+
+  .gallery-teaser__item--large {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  /* ---- Location preview — stack ---- */
+  .location-preview {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  /* ---- About hero — stack ---- */
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  .about-hero__image {
+    aspect-ratio: 4 / 3;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* ---- Philosophy — single column ---- */
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  /* ---- Team — 2 columns ---- */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---- Culture feature — stack ---- */
+  .culture-feature {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  /* ---- Experience rows — stack ---- */
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-7);
+  }
+
+  .experience-row:nth-child(even) .experience-row__image,
+  .experience-row:nth-child(even) .experience-row__content {
+    order: initial;
+  }
+
+  /* ---- Gallery masonry — 2 columns ---- */
+  .gallery-masonry {
+    column-count: 2;
+  }
+
+  /* ---- Room gallery grid — stack ---- */
+  .room-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 180px 180px;
+  }
+
+  .room-gallery__item--featured {
+    grid-row: span 1;
+  }
+
+  /* ---- Contact form — stack rows ---- */
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  /* ---- Footer — stack ---- */
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--sp-3);
+  }
+
+  /* ---- Section header — less bottom margin ---- */
+  .section-header {
+    margin-bottom: var(--sp-5);
+  }
+
+  /* ---- CTA banner — less padding ---- */
+  .cta-banner {
+    padding: var(--sp-7) var(--sp-5);
+  }
+}
+
+/* ---- Tablet Small (700px and below) ---- */
+@media (max-width: 700px) {
+  .experiences-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-teaser {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 140px 140px;
+  }
+
+  .gallery-teaser__item--large {
+    grid-column: span 2;
+  }
+
+  .stats-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+  }
+
+  .stat {
+    padding: var(--sp-3);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-masonry {
+    column-count: 2;
+    column-gap: var(--sp-3);
+  }
+
+  .gallery-item {
+    margin-bottom: var(--sp-3);
+  }
+}
+
+/* ---- Mobile (360px and below) ---- */
+@media (max-width: 360px) {
+  :root {
+    --section-px: 1rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .page-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .experiences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-teaser {
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px 140px 140px;
+  }
+
+  .gallery-teaser__item--large {
+    grid-column: span 1;
+  }
+
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-masonry {
+    column-count: 1;
+  }
+
+  .booking-bar__field {
+    padding: var(--sp-3) var(--sp-4);
+  }
+
+  .btn {
+    padding: var(--sp-3) var(--sp-5);
+    font-size: 0.65rem;
+  }
+
+  .btn--lg {
+    padding: var(--sp-4) var(--sp-5);
+    font-size: 0.7rem;
+  }
+
+  .contact-form {
+    padding: var(--sp-5);
+  }
+
+  .testimonial {
+    padding: var(--sp-5);
+  }
+
+  .amenities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .room-detail__meta {
+    gap: var(--sp-3);
+  }
+
+  .filter-pills {
+    gap: var(--sp-2);
+  }
+
+  .filter-pill {
+    padding: var(--sp-2) var(--sp-4);
+    font-size: 0.6rem;
+  }
+
+  .section-header {
+    margin-bottom: var(--sp-4);
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: var(--sp-1);
+  }
+
+  .timeline-item__year {
+    width: auto;
+    font-size: 1.4rem;
+  }
+}
+
+/* ---- Print styles ---- */
+@media print {
+  .site-header,
+  .site-footer,
+  .booking-bar,
+  .nav-toggle,
+  .main-nav {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* --- تعديلات الهيرو وشريط الحجز العامة --- */
+.hero {
+  position: relative ;
+  display: flex ;
+  flex-direction: column ;
+  justify-content: center ;
+  align-items: center ;
+  min-height: 100vh ;
+  height: auto ;
+  padding-top: 140px ;
+  padding-bottom: 100px ;
+  overflow: visible ;
+}
+
+.hero__booking {
+  position: relative ;
+  bottom: auto ;
+  top: auto ;
+  left: auto ;
+  transform: none ;
+  margin-top: 2rem ;
+  width: 100% ;
+  max-width: 1200px ;
+  z-index: 99 ;
+}
+
+.hero__booking .booking-bar {
+  margin-bottom: 0 ;
+}
